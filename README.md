@@ -2,9 +2,10 @@
 
 ## SDL Create App
 using command line to build and run:
-    mkdir build
-    cd ./build
-    cmake ..
-    cmake --build .
-    # run app
-    ./SdlCreateApp
+    cd ./p1-sdl-create-app <br/>
+    mkdir build<br/>
+    cd ./build<br/>
+    cmake ..<br/>
+    cmake --build .<br/>
+    # run app<br/>
+    ./SdlCreateApp<br/>
