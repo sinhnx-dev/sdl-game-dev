@@ -9,7 +9,7 @@ add_executable(${PROJECT_NAME} src/main.cpp)
 
 if(WIN32)
   message("Win32 App")
-  set(SDL_INCLUDE_DIR C:/usr/local/include/SDL2)
+  set(SDL_INCLUDE_DIR C:/SDL/include/SDL2)
   set(SDL_LIB C:/SDL/lib/libSDL2.dll)
   set(SDL_LIB_IMAGE C:/SDL/lib/libSDL2_image.dll)
 elseif(APPLE)
