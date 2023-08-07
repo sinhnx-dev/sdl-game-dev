@@ -1,7 +1,7 @@
 # sdl-game-dev
 
 ## SDL Create App
-using command line to build and run:
+### using command line to build and run:
     cd ./p1-sdl-create-app <br/>
     mkdir build<br/>
     cd ./build<br/>
