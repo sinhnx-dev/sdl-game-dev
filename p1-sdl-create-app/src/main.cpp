@@ -7,7 +7,7 @@ int main(int argv, char** args)
 	SDL_Init(SDL_INIT_EVERYTHING);
 
 	SDL_Window *window = SDL_CreateWindow(
-		"SDL Windows Demo", 
+		"SDL create Windows Demo", 
 		SDL_WINDOWPOS_CENTERED, 
 		SDL_WINDOWPOS_CENTERED,
 		800, 400, 0);
