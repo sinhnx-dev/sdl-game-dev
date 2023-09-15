@@ -32,3 +32,8 @@ target_link_libraries(
   ${SDL_LIB}
   ${SDL_LIB_IMAGE}
 )
+
+# Copy file
+file(COPY assets DESTINATION ./)
+file(COPY ${SDL_LIB} DESTINATION ./)
+file(COPY ${SDL_LIB_IMAGE} DESTINATION ./)
