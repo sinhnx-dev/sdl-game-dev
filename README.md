@@ -7,7 +7,7 @@
     CMake Tools             (Microsoft)
 ### Windows config
 #### C/C++ Compiler
-        tmd-gcc compiler
+##### tmd-gcc compiler
 #### CMake Tools
 ##### .vscode folder:
 ###### c_cpp_properties.json:
