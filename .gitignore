@@ -68,3 +68,6 @@ test/test_runner
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+# External Libraries
+**/external/*
