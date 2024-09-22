@@ -14,9 +14,18 @@ if(WIN32)
   set(SDL_LIB_IMAGE C:/SDL/lib/libSDL2_image.dll)
 elseif(APPLE)
   message("macOS App")
-  set(SDL_INCLUDE_DIR /usr/local/include/SDL2)
-  set(SDL_LIB /usr/local/lib/libSDL2.dylib)
-  set(SDL_LIB_IMAGE /usr/local/lib/libSDL2_image.dylib)
+  find_package(SDL2 REQUIRED COMPONENTS SDL2)
+  target_link_libraries(${PROJECT_NAME} PRIVATE SDL2::SDL2)
+  # set(SDL_INCLUDE_DIR /usr/local/include/SDL2)
+
+  find_package(SDL2_image REQUIRED COMPONENTS SDL2_image)
+  target_link_libraries(${PROJECT_NAME} PRIVATE SDL2_image::SDL2_image)
+
+  find_package(SDL2_ttf REQUIRED COMPONENTS SDL2_ttf)
+  target_link_libraries(${PROJECT_NAME} PRIVATE SDL2_ttf::SDL2_ttf)
+
+  # set(SDL_LIB /usr/local/lib/libSDL2.dylib)
+  # set(SDL_LIB_IMAGE /usr/local/lib/libSDL2_image.dylib)
 elseif(UNIX)
 
 endif()

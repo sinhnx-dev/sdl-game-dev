@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_OBJC_COMPILE_OBJECT "")
 
 project(SDL3Game VERSION 1.0.0)
-add_executable(SDL3Game main.cpp)
+add_executable(SDL3Game src/main.cpp)
 
 add_subdirectory(external/SDL)
 add_subdirectory(external/SDL_image)
