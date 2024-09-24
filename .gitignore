@@ -70,4 +70,4 @@ test/test_runner
 *.vsix
 
 # External Libraries
-**/external/*
+**/external/SDL*
