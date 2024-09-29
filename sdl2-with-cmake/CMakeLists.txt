@@ -15,7 +15,20 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(SDL2 SDL2_image)
 
 add_executable(${PROJECT_NAME} src/main.cpp)
-target_link_libraries(${PROJECT_NAME} PRIVATE SDL2 SDL2_image)
+
+if(WIN32)
+  target_link_libraries(${PROJECT_NAME} 
+    mingw32 
+    SDL2main 
+    SDL2 
+    SDL2_image
+  )
+elseif(APPLE)
+  target_link_libraries(${PROJECT_NAME} PRIVATE 
+    SDL2::SDL2
+    SDL2_image::SDL2_image
+  )
+endif()
 
 # Copy file
 file(COPY assets DESTINATION ./)
