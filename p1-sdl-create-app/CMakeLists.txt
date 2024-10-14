@@ -13,7 +13,13 @@ if(WIN32)
     link_directories(${SDL2_LIB_DIR})
 endif()
 
-add_executable(${PROJECT_NAME} src/main.cpp)
+# Adding our source files
+file(GLOB_RECURSE PROJECT_SOURCES CONFIGURE_DEPENDS "${CMAKE_CURRENT_LIST_DIR}/src/*.cpp") 
+set(PROJECT_INCLUDE "${CMAKE_CURRENT_LIST_DIR}/src/include")
+
+add_executable(${PROJECT_NAME} ${PROJECT_SOURCES})
+target_sources(${PROJECT_NAME} PRIVATE ${PROJECT_SOURCES})
+target_include_directories(${PROJECT_NAME} PRIVATE ${PROJECT_INCLUDE})
 
 if(WIN32)
   message("Win32 App")
